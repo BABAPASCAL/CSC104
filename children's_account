@@ -1,0 +1,10 @@
+class ChildrensAccount(Account):
+    def __init__(self, account_number, initial_balance=0):
+        super().__init__(account_number, initial_balance)
+
+    def deposit(self, amount):
+        interest = amount * 0.007
+        amount += interest
+        super().deposit(amount)
+        print(f"Deposit Successful! Interest added: {interest}")
+        print(f"Current Balance: {self._balance}")
