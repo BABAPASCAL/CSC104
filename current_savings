@@ -1,0 +1,7 @@
+class CurrentAccount(Account):
+    def __init__(self, account_number, initial_balance=0):
+        super().__init__(account_number, initial_balance)
+
+    def deposit(self, amount):
+        super().deposit(amount)
+        print(f"Deposit Successful! New Balance: {self._balance}")
